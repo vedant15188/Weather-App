@@ -1,0 +1,22 @@
+#bodyTag {
+    font-family: "Roboto Mono Light";
+    font-size: 60px;
+    color: #a8a8a8;
+    background-color: #323232;
+}
+
+/*div {*/
+/*border: solid 1px;*/
+/*}*/
+
+#city {
+    font-size: 45px;
+}
+
+.temperature {
+    font-size: 30px;
+}
+
+.conditions {
+    font-size: 30px;
+}
