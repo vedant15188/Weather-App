@@ -5,15 +5,22 @@
 var location;
 var weather = {};
 
+function displayIcon(iconid) {
+    var source = "http://openweathermap.org/img/w/" + iconid + ".png";
+    document.getElementById("icon1").setAttribute("src", source);
+}
+
 function getWeather(latitude, longitude) {
     $.getJSON("http://api.openweathermap.org/data/2.5/weather?lat=" + latitude + "&lon=" + longitude + "&appid=b46f90d08c01a76edf575793b41a79bc",
         function (weatherData) {
             weather["conditions"] = weatherData.weather[0].description;
             weather["temperature"] = Math.ceil(weatherData.main["temp"] - 273);
+            weather["iconID"] = weatherData.weather[0].icon;
             $("#conditions").html(weatherData.weather[0].description);
             $("#conditions").fadeIn(700);
             $("#temperature").html(weather.temperature + "<a id='celsius' onclick='displayFarenheight()'>°C</a>");
             $("#temperature").fadeIn(700);
+            displayIcon(weather.iconID);
         });
 }
 

@@ -7,6 +7,8 @@
     <link href='https://fonts.googleapis.com/css?family=Roboto:100,300,700,400' rel='stylesheet' type='text/css'>
     <meta charset="UTF-8">
     <!--https://code.jquery.com/jquery-2.2.4.min.js-->
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/skycons/1396634940/skycons.min.js"></script>
     <script type="text/javascript" src="js/jquery-2.2.4.min.js"></script>
     <script type="text/javascript" src="js/scripts.js"></script>
     <title>Weather App</title>
@@ -27,13 +29,16 @@
         <div id="temperature"><a id="celsius"></a><a id="farenheight"></a></div>
     </div>
     <div class="text-center row">
-        <div id="conditions">Hazy</div>
+        <div id="conditions"></div>
     </div>
-    <!--PLACE A CORRESPONDING ICON HERE-->
+    <div class="text-center row" id="icons">
+        <img id="icon1" width="128" height="128">
+    </div>
 </div>
 <script>
     $(document).ready(function () {
         getLocation();
+        var source = "http://openweathermap.org/img/w/" + weather.iconID;
     });
 </script>
 </body>
