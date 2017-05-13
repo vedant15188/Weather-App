@@ -13,10 +13,10 @@
     font-size: 45px;
 }
 
-.temperature {
+#temperature {
     font-size: 30px;
 }
 
-.conditions {
+#conditions {
     font-size: 30px;
 }
